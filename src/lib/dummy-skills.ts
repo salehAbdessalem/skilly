@@ -1,0 +1,67 @@
+export const dummySkills: SKillRecord[] = [
+	{
+		id: "skill-001",
+		title: "Write Code",
+		slug: "write-code",
+		description:
+			"Generate clean, maintainable code from a focused implementation brief.",
+		category: "Development",
+		tags: ["coding", "implementation", "developer-tools"],
+		installCommand: "npx skills add write-code",
+		createdAt: "2026-09-25T10:00:00.000Z",
+		authorClerkId: null,
+		authorEmail: "demo@example.com",
+	},
+	{
+		id: "skill-002",
+		title: "Review Pull Requests",
+		slug: "review-pull-requests",
+		description:
+			"Review code changes for correctness, regressions, and missing tests.",
+		category: "Development",
+		tags: ["code-review", "testing", "quality"],
+		installCommand: "npx skills add review-pull-requests",
+		createdAt: "2026-09-24T14:30:00.000Z",
+		authorClerkId: null,
+		authorEmail: "demo@example.com",
+	},
+	{
+		id: "skill-003",
+		title: "Write Technical Docs",
+		slug: "write-technical-docs",
+		description:
+			"Turn implementation details into concise, useful technical documentation.",
+		category: "Documentation",
+		tags: ["documentation", "technical-writing", "guides"],
+		installCommand: "npx skills add write-technical-docs",
+		createdAt: "2026-09-23T09:15:00.000Z",
+		authorClerkId: null,
+		authorEmail: "demo@example.com",
+	},
+	{
+		id: "skill-004",
+		title: "Debug TypeScript",
+		slug: "debug-typescript",
+		description:
+			"Diagnose TypeScript errors and suggest minimal, type-safe fixes.",
+		category: "Development",
+		tags: ["typescript", "debugging", "types"],
+		installCommand: "npx skills add debug-typescript",
+		createdAt: "2026-09-22T16:45:00.000Z",
+		authorClerkId: null,
+		authorEmail: "demo@example.com",
+	},
+	{
+		id: "skill-005",
+		title: "Plan Product Features",
+		slug: "plan-product-features",
+		description:
+			"Break product ideas into scoped requirements and actionable delivery steps.",
+		category: "Productivity",
+		tags: ["planning", "product", "requirements"],
+		installCommand: "npx skills add plan-product-features",
+		createdAt: null,
+		authorClerkId: null,
+		authorEmail: null,
+	},
+];
