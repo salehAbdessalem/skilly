@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { usePostHog } from "@posthog/react";
 import { ArrowBigUp, ArrowUpRight, Bookmark, Check, Copy, MessageSquare } from "lucide-react";
 import { useState } from "react";
 
@@ -11,11 +12,18 @@ const SkillCard = ({
 	tags,
 	title,
 }: SKillRecord) => {
+	const posthog = usePostHog();
 	const [copied, setCopied] = useState(false);
+
+	const handleOpen = () => posthog.capture("skill_opened");
 
 	const handleCopy = async () => {
 		try{
 			await navigator.clipboard.writeText(installCommand);
+			posthog.capture("skill_install_command_copied");
+			posthog.logger.info("skill install command copied", {
+				copy_method: "clipboard",
+			});
 			setCopied(true);
 			setTimeout(() => setCopied(false), 2000);
 		} catch {
@@ -24,7 +32,7 @@ const SkillCard = ({
 	};
 	return (
 		<article className="skill-card">
-			<Link to="/skills" tabIndex={-1} aria-label={`Open ${title}`} className="overlay"/>
+			<Link to="/skills" tabIndex={-1} aria-label={`Open ${title}`} className="overlay" onClick={handleOpen}/>
 			<div className="chrome">
 				<div className="chrome-bar">
 					<div className="lights">
@@ -48,7 +56,7 @@ const SkillCard = ({
 					<p className="category">{category}</p>
 				</div>
 				<div className="summary">
-					<Link to="/skills" className="title-link">
+					<Link to="/skills" className="title-link" onClick={handleOpen}>
 						<h3>{title}</h3>
 					</Link>
 					<p>{description}</p>
@@ -77,7 +85,7 @@ const SkillCard = ({
 					</div>
 
 					<div className="actions">
-						<Link to="/skills" className="open" title={`Open ${title}`}>
+						<Link to="/skills" className="open" title={`Open ${title}`} onClick={handleOpen}>
 							<span>Open</span>
 							<ArrowUpRight size={14} />
 						</Link>

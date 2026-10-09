@@ -11,3 +11,14 @@ dist-ssr
 .vinxi
 __unconfig*
 todos.json
+.env.local
+
+# firebase data connect
+.firebase
+dataconnect/.dataconnect
+
+# secrets / service account keys (never commit these)
+secrets/
+*-firebase-adminsdk-*.json
+serviceAccountKey*.json
+client_secret*.json

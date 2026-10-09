@@ -1,0 +1,13 @@
+specVersion: "v1"
+serviceId: "skilly-d75d9-service"
+location: "europe-west8"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "skilly-d75d9-database"
+        cloudSql:
+          instanceId: "skilly-d75d9-instance"
+          # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
+          # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
+connectorDirs: ["./example"]

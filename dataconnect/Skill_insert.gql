@@ -1,0 +1,7 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  skill_insert(
+    data: {id: "11111111222233334444555555555558", authorClerkId: "user_3KFHvwwBlbbAlJs30ZHh7F5dSI3", createdAt: "2026-10-08T15:31:32.155Z", description: "Break product ideas into scoped requirements and actionable delivery steps.", installCommand: "npx skills add plan-product-features", promptConfig: "You are a helpful assistant.", tags: ["ai-agent", "engineering"], title: "Plan Product Features", usageExample: "Plan product features by breaking down ideas into scoped requirements and actionable delivery steps."}
+  )
+}
