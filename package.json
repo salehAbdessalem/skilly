@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "@clerk/tanstack-react-start": "^1.6.4",
+    "@dataconnect/generated": "file:src/dataconnect-generated",
+    "@posthog/react": "latest",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-devtools": "latest",
     "@tanstack/react-query": "latest",

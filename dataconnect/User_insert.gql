@@ -1,0 +1,5 @@
+# This is a file for you to write an un-named mutation. 
+# Only one un-named mutation is allowed per file.
+mutation {
+  user_insert(data: {clerkId: "user_3KFHvwwBlbbAlJs30ZHh7F5dSI3", email: "salih.abdessalem@gmail.com", imageUrl: "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NLczJLeTFqYk04SWlvS3dTT0RyLWEwckNoNnhyMU5NZ1JwNjFSemZYODRDV1JJQnItUj1zMTAwMC1jIiwicyI6Im8xbTY1QzZHVTJTSXdFbTVPSVpGMlBzUUlIS3JVd2RReXVpeTk4ZXZ6RUkifQ", username: "saleh"})
+}
